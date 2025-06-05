@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b3dc310b-10f7-4918-832d-dbe58b64933e">
+  <name>ВКМ_ДлительныеОпреации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Длительные операции (ВКМ)</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+  <server>true</server>
+</mdclass:CommonModule>

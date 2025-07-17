@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="556e0b67-cbf3-4f04-9431-6e53fa76e5b9">
+  <producedTypes>
+    <objectType typeId="531e801d-f102-4598-af71-b990bfb2b1b0" valueTypeId="36ce171a-d9b3-4f9c-8498-8824c99d082f"/>
+    <refType typeId="d281f9f2-a030-496a-ba0b-f963103a2e67" valueTypeId="88fd56f5-a92d-466a-9793-751b8633df32"/>
+    <selectionType typeId="8eb592c6-ed3f-4d89-b65e-157bdcbe74bf" valueTypeId="1ae36075-a620-470d-80e8-44845822599e"/>
+    <listType typeId="6237689d-0863-4279-8b47-86937bfe5d6d" valueTypeId="32c2af70-66f0-4db0-a3b5-7b5aebd77ab9"/>
+    <managerType typeId="e7f9a3e1-d702-4a73-be4f-1e6835095b06" valueTypeId="79547e3a-005b-4ade-8b73-c79fa5e387c5"/>
+  </producedTypes>
+  <name>ВКМ_НачислениеФиксированнойПремии</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисление фиксированной премии (ВКМ)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ВКМ_НачислениеФиксированнойПремии.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
+  <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
+  <registerRecords>CalculationRegister.ВКМ_ДополнительныеНачисления</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <tabularSections uuid="309aa9e2-9bae-4f70-8313-672a0c45f1e2">
+    <producedTypes>
+      <objectType typeId="dcf81c64-3723-4f13-adc5-b95d54d55ce1" valueTypeId="5620ae3d-285a-4c72-ae2f-3743b776bd73"/>
+      <rowType typeId="addc87f6-b6e8-4676-a91d-66c3ef88b144" valueTypeId="18c7d7fb-83a1-4f4a-ab9c-0fddafe56ae2"/>
+    </producedTypes>
+    <name>СписокСотрудников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список сотрудников</value>
+    </synonym>
+    <attributes uuid="ca62fdfb-0f61-4956-b3b6-1d3a370b6969">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="320296f4-7d81-4530-ab7f-db47f2e6325a">
+      <name>СуммаПремии</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма премии</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ae58f29e-7b4f-4159-9818-cc9c60afb130">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ВКМ_Удержания</types>
+        <types>ChartOfCalculationTypesRef.ВКМ_ДополнительныеНачисления</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

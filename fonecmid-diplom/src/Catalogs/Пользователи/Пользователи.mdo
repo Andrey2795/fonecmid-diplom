@@ -391,6 +391,21 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <attributes uuid="8311442b-f100-49de-a412-45f2636aadf9">
+    <name>ВКМ_Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность (ВКМ)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВКМ_Должности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
   <tabularSections uuid="245f870e-a53a-4d86-aa0a-c0c7709b8acb">
     <producedTypes>
       <objectType typeId="d775216b-7adc-4b4e-972d-b6ad881e79dd" valueTypeId="16c681bb-1a49-44e1-82a6-4af12b00b701"/>

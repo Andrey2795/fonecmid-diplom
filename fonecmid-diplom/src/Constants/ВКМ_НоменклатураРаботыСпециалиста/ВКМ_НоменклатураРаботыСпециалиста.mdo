@@ -8,7 +8,7 @@
   <name>ВКМ_НоменклатураРаботыСпециалиста</name>
   <synonym>
     <key>ru</key>
-    <value>Номенклатураработы специалиста (ВКМ)</value>
+    <value>Номенклатура работы специалиста (ВКМ)</value>
   </synonym>
   <type>
     <types>CatalogRef.Номенклатура</types>

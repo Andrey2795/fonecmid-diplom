@@ -7,47 +7,70 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Сотрудник</dataPath>
-			<field>Сотрудник</field>
+			<dataPath>СуммаРаботыСпециалиста</dataPath>
+			<field>СуммаРаботыСпециалиста</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма работы специалиста</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаАбонентскойПлаты</dataPath>
+			<field>СуммаАбонентскойПлаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма абонентской платы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКОплатеОборот</dataPath>
-			<field>СуммаКОплатеОборот</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма к оплате</v8:content>
-				</v8:item>
-			</title>
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ЧасовКОплатеОборот</dataPath>
-			<field>ЧасовКОплатеОборот</field>
+			<dataPath>КоличествоЧасов</dataPath>
+			<field>КоличествоЧасов</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Часов к оплате</v8:content>
+					<v8:content>Количество часов</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.Сотрудник КАК Сотрудник,
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.ЧасовКОплатеОборот КАК ЧасовКОплатеОборот,
-	ВКМ_ВыполненныеСотрудникомРаботыОбороты.СуммаКОплатеОборот КАК СуммаКОплатеОборот
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент КАК Клиент,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор КАК Договор,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор.СуммаАбонентскойПлаты КАК СуммаАбонентскойПлаты,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.КоличествоЧасовОборот КАК КоличествоЧасов,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеОборот КАК СуммаРаботыСпециалиста
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты(, , Период, ) КАК ВКМ_ВыполненныеСотрудникомРаботыОбороты</query>
+	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(, , Месяц, ) КАК ВКМ_ВыполненныеКлиентуРаботыОбороты</query>
 	</dataSet>
 	<totalField>
-		<dataPath>СуммаКОплатеОборот</dataPath>
-		<expression>Сумма(СуммаКОплатеОборот)</expression>
+		<dataPath>КоличествоЧасов</dataPath>
+		<expression>Сумма(КоличествоЧасов)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>ЧасовКОплатеОборот</dataPath>
-		<expression>Сумма(ЧасовКОплатеОборот)</expression>
+		<dataPath>СуммаАбонентскойПлаты</dataPath>
+		<expression>Сумма(СуммаАбонентскойПлаты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРаботыСпециалиста</dataPath>
+		<expression>Сумма(СуммаРаботыСпециалиста)</expression>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -110,29 +133,27 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Выработка специалистов</v8:content>
+				<v8:content>Анализ выставленных актов</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Сотрудник</dcsset:field>
+					<dcsset:field>Клиент</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ЧасовКОплатеОборот</dcsset:field>
+					<dcsset:field>Договор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаКОплатеОборот</dcsset:field>
+					<dcsset:field>СуммаАбонентскойПлаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЧасов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРаботыСпециалиста</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>01d38d4d-76fa-4a79-9c41-03ad7f097aba</dcsset:userSettingID>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Период</dcscor:parameter>

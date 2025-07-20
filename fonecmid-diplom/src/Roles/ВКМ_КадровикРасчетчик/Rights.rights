@@ -482,6 +482,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ВКМ_ВыработкаСпециалистов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.ВКМ_ГрафикиРаботы</name>
 		<right>
 			<name>Read</name>
@@ -507,6 +518,17 @@
 		<name>InformationRegister.ВКМ_УсловияОплатыСотрудников</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ВКМ_РасходЗапланированныхОтпусков</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -775,6 +797,17 @@
 		</right>
 		<right>
 			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ВКМ_РасчетыССотрудниками</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

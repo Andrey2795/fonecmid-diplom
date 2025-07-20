@@ -627,7 +627,8 @@
   <roles>Role.ЧтениеУчетныхЗаписейЭлектроннойПочты</roles>
   <roles>Role.ВКМ_ОбслуживаниеКлиента</roles>
   <roles>Role.ВКМ_МассовоеСозданиеДокументовРеализации</roles>
-  <roles>Role.ВКМ_КадровикРасчетчик</roles>
+  <roles>Role.ВКМ_РасчетЗП</roles>
+  <roles>Role.ВКМ_АнализВыставленныхАктов</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияКакВыполнитьНастройкуМакетаOfficeOpen</commonTemplates>

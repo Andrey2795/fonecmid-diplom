@@ -33,16 +33,23 @@
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВКМ_ОсновныеНачисленияФактическийПериодДействия.Сотрудник КАК Сотрудник,
-	РАЗНОСТЬДАТ(НАЧАЛОПЕРИОДА(ВКМ_ОсновныеНачисленияФактическийПериодДействия.ПериодДействияНачало, ДЕНЬ), НАЧАЛОПЕРИОДА(ВКМ_ОсновныеНачисленияФактическийПериодДействия.ПериодДействияКонец, ДЕНЬ), ДЕНЬ) КАК ДнейОтпускаФакт,
+	СУММА(РАЗНОСТЬДАТ(НАЧАЛОПЕРИОДА(ВКМ_ОсновныеНачисленияФактическийПериодДействия.ПериодДействияНачало, ДЕНЬ), НАЧАЛОПЕРИОДА(ВКМ_ОсновныеНачисленияФактическийПериодДействия.ПериодДействияКонец, ДЕНЬ), ДЕНЬ)) КАК ДнейОтпускаФакт,
 	36 КАК ДнейОтпускаЗаПолныйГод
 ИЗ
 	РегистрРасчета.ВКМ_ОсновныеНачисления.ФактическийПериодДействия(ВидРасчета = &amp;ВидРасчета) КАК ВКМ_ОсновныеНачисленияФактическийПериодДействия
 ГДЕ
-	ВКМ_ОсновныеНачисленияФактическийПериодДействия.ПериодДействия МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
+	ВКМ_ОсновныеНачисленияФактическийПериодДействия.ПериодДействия МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ВКМ_ОсновныеНачисленияФактическийПериодДействия.Сотрудник</query>
 	</dataSet>
 	<totalField>
 		<dataPath>ДнейОтпускаФакт</dataPath>
 		<expression>Сумма(ДнейОтпускаФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДнейОтпускаЗаПолныйГод</dataPath>
+		<expression>ДнейОтпускаЗаПолныйГод</expression>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -152,6 +159,34 @@
 					<dcsset:userSettingID>169f1543-9055-4298-8c63-06eebff7610d</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДнейОтпускаФакт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДнейОтпускаФакт</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">36</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>

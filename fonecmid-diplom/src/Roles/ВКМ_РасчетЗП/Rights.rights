@@ -388,13 +388,32 @@
 		</right>
 	</object>
 	<object>
-		<name>CalculationRegister.ВКМ_Удержания</name>
+		<name>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CalculationRegister.ВКМ_Удержания</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -504,13 +523,104 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.ВКМ_ГрафикиРаботы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Insert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveInsert</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMark</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveSetDeletionMarkPredefinedData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveClearDeletionMarkPredefinedData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ReadDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryOfMissingData</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistorySettings</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>UpdateDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ViewDataHistory</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EditDataHistoryVersionComment</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>SwitchToDataHistoryVersion</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CalculationRegister.ВКМ_ДополнительныеНачисления</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
 		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -543,7 +653,15 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -591,6 +709,24 @@
 		</right>
 		<right>
 			<name>Output</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.ВКМ_ДобавленныеОбъекты</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

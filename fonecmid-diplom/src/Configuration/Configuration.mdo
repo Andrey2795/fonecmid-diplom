@@ -631,6 +631,7 @@
   <roles>Role.ВКМ_АнализВыставленныхАктов</roles>
   <roles>Role.ВКМ_РольДляБухгалтера</roles>
   <roles>Role.ВКМ_ОтчетПоВыработкеСпециалистов</roles>
+  <roles>Role.ВКМ_ОбслуживаниеКлиентаДляМенеджеров</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияКакВыполнитьНастройкуМакетаOfficeOpen</commonTemplates>
